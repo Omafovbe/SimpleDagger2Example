@@ -1,15 +1,13 @@
 package com.example.simpledagger.dependencyInjection
 
-import com.example.simpledagger.myApplication
+import com.example.simpledagger.MyApplication
 import dagger.Component
-import dagger.android.AndroidInjectionModule
 
 @Component(
     modules = [
-        AndroidInjectionModule::class,
         ActivitiesModule::class
     ]
 )
 interface AppComponent {
-    fun inject(myApplication: myApplication)
+    fun inject(myApplication: MyApplication)
 }
